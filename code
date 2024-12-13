@@ -1,0 +1,24 @@
+pip install folium
+## To download mapping software
+
+import folium 
+## To  able to use in python 
+
+m = folium.Map(location = [43.00000,-75.0000],
+                    zoom_start = 12)
+##this is to use the location
+
+folium.Marker([43.00000,-75.00000],
+             popup = 'New York').add_to(m)
+
+##to use map markers
+
+folium.PolyLine(locations =[(43.00000,-75.0000), (43.00000,-75.00000)],
+               line_opacity = .05).add_to(m)
+##Map Boundaries 
+
+m.save("m.html")
+##Run into HTML  
+
+m
+#to rum the program
